@@ -1,0 +1,20 @@
+depth_anything_3:
+  ros__parameters:
+    # Input RGB image topic
+    image_topic: "/camera/color/image_raw"
+
+    # Output depth image topic
+    depth_image_topic: "/depth"
+
+    # Device to run inference on
+    # Options: "cuda:0", "cuda:1", "cpu"
+    device: "cuda:0"
+
+    # Model name from Hugging Face Hub
+    # Options:
+    #   - "depth-anything/DA3-Small"     (80M parameters)
+    #   - "depth-anything/DA3-Base"      (120M parameters)
+    #   - "depth-anything/DA3-Large"     (350M parameters)
+    #   - "depth-anything/DA3-Giant"     (1.15B parameters)
+    #   - "depth-anything/DA3Metric-Large" (metric depth)
+    model_name: "depth-anything/DA3-Large"
