@@ -2,29 +2,29 @@ from setuptools import setup
 from glob import glob
 import os
 
-package_name = 'depth_anything_3_ros2'
+package_name = "depth_anything_3_ros2"
 
 setup(
     name=package_name,
-    version='1.0.0',
+    version="1.0.0",
     packages=[package_name],
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
-        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
+        ("share/" + package_name, ["package.xml"]),
+        (os.path.join("share", package_name, "launch"), glob("launch/*.py")),
+        (os.path.join("share", package_name, "config"), glob("config/*.yaml")),
+        (os.path.join("lib", package_name, "lib"), glob("lib/*.py")),
     ],
-    install_requires=['setuptools'],
+    install_requires=["setuptools"],
     zip_safe=True,
-    maintainer='Simon Pesch',
-    maintainer_email='hello@nomito.de',
-    description='ROS2 wrapper for Depth Anything 3 monocular depth estimation',
-    license='Apache-2.0',
-    tests_require=['pytest'],
+    maintainer="Simon Pesch",
+    maintainer_email="hello@nomito.de",
+    description="ROS2 wrapper for Depth Anything 3 monocular depth estimation",
+    license="Apache-2.0",
+    tests_require=["pytest"],
     entry_points={
-        'console_scripts': [
-            'depth_anything_node = depth_anything_3_ros2.depth_anything_node:main'
+        "console_scripts": [
+            "depth_anything_node = depth_anything_3_ros2.depth_anything_node:main"
         ],
     },
 )

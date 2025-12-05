@@ -1,7 +1,7 @@
 depth_anything_3:
   ros__parameters:
     # Input RGB image topic
-    image_topic: "/camera/color/image_raw"
+    image_topic: "/image_raw"
 
     # Output depth image topic
     depth_image_topic: "/depth"
